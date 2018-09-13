@@ -49,8 +49,13 @@ $(function() {
         },
         errorPlacement: function(error, element) {
         },
+        success: function(label) {
+           // alert(' success');
+        },
         submitHandler: function(form) {
-            form.submit();
+            $(".popup-first").hide();
+            $(".popup-result").show();
+            //form.submit();
         }
     });
 

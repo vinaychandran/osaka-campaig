@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <title>Booking Widget</title>
+    <title>Campaign</title>
     <meta charset=utf-8>
     <meta name=viewport content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
     <meta http-equiv=X-UA-Compatible content="IE=11">    
@@ -69,39 +69,45 @@
         <div class="popup-header">
             <span></span>            
         </div>
-        <div class="popup-intro">交浪スナムキ便景鳥ヤ思月ゆ一鮮地 MYSTAYSメケソ児極そ合暮ニヲユヒ段文チ内法カオヒシ内境事す入負シス飯雄ねド</div>
-        <h3>児極そ合暮ニヲユヒ段文チ内法カオヒシ内境事入負シス飯雄ねド</h3>
-        <h4>シス飯雄ねド</h4>
-        <div class="highlight">
-            <img src="dest/images/prize.jpg" alt="">
-            <div class="highlight-wrap">
-                <span>A便</span>
-                <p>交浪スナムキ便景鳥ヤ思月ゆ暮ニヲユヒ段文チ内法カオヒシ内境事す</p>
+        <div class="popup-first">
+            <div class="popup-intro">交浪スナムキ便景鳥ヤ思月ゆ一鮮地 MYSTAYSメケソ児極そ合暮ニヲユヒ段文チ内法カオヒシ内境事す入負シス飯雄ねド</div>
+            <h3>児極そ合暮ニヲユヒ段文チ内法カオヒシ内境事入負シス飯雄ねド</h3>
+            <h4>シス飯雄ねド</h4>
+            <div class="highlight">
+                <img src="dest/images/prize.jpg" alt="">
+                <div class="highlight-wrap">
+                    <span>A便</span>
+                    <p>交浪スナムキ便景鳥ヤ思月ゆ暮ニヲユヒ段文チ内法カオヒシ内境事す</p>
+                </div>
             </div>
+            <form name="mainForm" id="mainForm" action="#" >
+                <div class="input-wrapper clearfix">
+                    <div class="input-control">
+                        <label class="text-input" for="name">氏名</label>
+                        <input type="text" id="name" name="name" placeholder="氏名を入力" autocomplete="off" />
+                    </div>
+                    <div class="input-control">
+                        <label class="text-input" for="email">メールアドレス</label>
+                        <input type="text" id="email" name="email" placeholder="メールアドレスを入力" autocomplete="off" />
+                    </div>
+                    <button type="submit" class="form-btn">応募する</button>
+                </div>
+                <div class="checkbox-control">  
+                    <label class="container">  * <a href="#" id="popup-button">応募規約</a>・プライバシーポリシーに同意の上、応募します。              
+                        <input type="checkbox" id="privacyPolicy" name="checkbox[]" placeholder="privacyPolicy" />
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+            </form>
         </div>
-        <form name="mainForm" id="mainForm" action="" >
-            <div class="input-wrapper clearfix">
-                <div class="input-control">
-                    <label class="text-input" for="name">氏名</label>
-                    <input type="text" id="name" name="name" placeholder="氏名を入力" autocomplete="off" />
-                </div>
-                <div class="input-control">
-                    <label class="text-input" for="email">メールアドレス</label>
-                    <input type="text" id="email" name="email" placeholder="メールアドレスを入力" autocomplete="off" />
-                </div>
-                <button type="submit" class="form-btn">応募する</button>
+        <div class="popup-result">
+            <h3>ありがとうございました！</h3>
+            <div class="img">
+                <img src="dest/images/image.jpg" alt="">
             </div>
-            <div class="checkbox-control">  
-                <label class="container">  * <a href="#" id="popup-button">応募規約</a>・プライバシーポリシーに同意の上、応募します。              
-                    <input type="checkbox" id="privacyPolicy" name="checkbox[]" placeholder="privacyPolicy" />
-                    <span class="checkmark"></span>
-                </label>
-            </div>
-            
-        </form>
-        
-        
-        
+            <p>今度は5％の割引がありますので、続行をクリックしてください<br/>バーとレストランを発見する</p>
+            <a href="thank-you.html">持続する</a>
+        </div>
     </div>
     <script src="js/jquery-1.9.1.js"></script> 
     <script src="js/jquery.validate.min.js"></script> 

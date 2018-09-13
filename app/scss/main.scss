@@ -287,6 +287,11 @@ h2{
         display: block;
         transform: scale(1); 
     }
+    
+}
+
+.popup-first{
+    //display: none;
     .popup-intro{
         padding: 0 0 15px;
          font-size: 18px;
@@ -306,6 +311,40 @@ h2{
         font-weight: bold;
         margin: 0 0 7px;
         font-family: $go-bold;
+    }
+}
+
+.popup-result{
+    display: none;
+    h3{
+        font-family: $go-bold;
+        font-size: 35px;
+        margin: 0 0 10px;
+    }
+    .img{
+        display: block;
+        width: 140px;
+        height: 140px;
+        margin: 0 auto 20px;
+    }
+    p{
+         font-size: 16px;
+         font-weight: 500;
+         line-height: 1.67;
+         margin-bottom: 20px;
+    }
+    a{
+        display: inline-block;
+        width: 140px;
+        text-decoration: none;
+        border: solid 2px #232e48;
+        border-radius: 3px;
+        padding: 8px 10px;
+        color: #232e48;
+        font-size: 14px;
+        font-family: $go-bold;
+        font-weight: 700;
+        margin-bottom: 20px;
     }
 }
 

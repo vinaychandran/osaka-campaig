@@ -19,6 +19,7 @@ gulp.task('clean:dist', function() {
 })
 
 
+
 gulp.task('sass', function() {
   return gulp.src('app/scss/main.scss') // Gets all files ending with .scss in app/scss
     .pipe(sass())
