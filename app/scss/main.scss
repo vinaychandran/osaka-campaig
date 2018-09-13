@@ -1,0 +1,515 @@
+// Breakpoint
+$lg-width: 1200px;
+$md-width: 1024px;
+$sm-width: 768px;
+$xs-width: 481px;
+$xxs-width: 360px;
+
+$cal-color : #232e48;
+$cal-primaray-color:#ffd25d;
+$cal-secondar-color:#7b7b85;
+$cal-primary-bg: #fff;
+$cal-secondary-bg: #f2f2f2;
+
+
+$go-semibold: "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "Sawarabi Gothic", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+$go-bold: "Yu Gothic Bold", "游ゴシック Bold", "YuGothic", "ゴシック体", "Sawarabi Gothic", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+
+
+
+@mixin lg {
+    @media screen and (min-width: #{$lg-width}) {
+        @content;
+    }
+}
+
+@mixin md {
+    @media (min-width: #{$md-width}) {
+        @content;
+    }
+}
+
+@mixin sm {
+    @media (min-width: #{$sm-width}) {
+        @content;
+    }
+}
+
+@mixin xs {
+    @media screen and (min-width: #{$xs-width}) {
+        @content;
+    }
+}
+
+@mixin xxs {
+    @media screen and (max-width: #{$xxs-width}) { 
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media screen and (min-width: #{$md-width + 1px}) {
+        @content;
+    }
+}
+
+@mixin device {
+    @media screen and (max-width: #{$md-width - 1px}) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: #{$sm-width}) and (max-width: #{$md-width}) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media screen and (max-width: #{$sm-width - 1px}) {
+        @content;
+    }
+} 
+ 
+@mixin print {
+    @media print {
+        @content;
+    }
+}
+
+@mixin landscape {
+    @media screen and (orientation: landscape) {
+        @content;
+    } 
+}
+
+@mixin portrait {
+    @media screen and (orientation: portrait) {
+        @content;
+    }
+}
+
+
+
+body{
+	font-family: $go-semibold;
+    background: #ffa229;
+    margin: 0;
+    padding: 0;
+    background: url("../images/floor.jpg") ;
+}
+
+*{
+	outline: 0;
+    box-sizing: border-box;
+}
+
+.container{
+	max-width: 940px;
+	margin: 0 auto;
+}
+
+.osaka-campaign-wrap{    
+    text-align: center;
+    color: #fff; 
+}
+
+.logo{
+    position: fixed;
+    top: 30px;
+    left: 30px;
+}
+
+.camapign-home-top{
+    background: url("../images/bg.jpg");
+    background-size:cover;   
+
+}
+
+h1{
+    font-size: 25px;
+    font-weight: bold;
+    padding: 78px 0 35px;
+    font-family: $go-bold;
+    margin: 0;
+}
+
+h2{
+    font-size: 55px;
+    font-family: $go-bold;
+    padding: 27px 0 135px;
+    margin: 0;
+}
+
+
+.campaign-name{
+    img{
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+.camapign-home-bottom{
+    background: url("../images/floor.jpg");
+    background-size:cover;
+}
+
+.gift-box-wrap{
+    max-width: 1000px;
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-around;
+    position: relative;
+    .gift-box{
+        width: 286px;
+        height: 210px;
+        background: url("../images/shadow.png") no-repeat;
+        position: relative; 
+        margin-top: -95px;
+         -webkit-transition-duration: 0.3s;
+            transition-duration: 0.3s;
+            -webkit-transition-property: transform;
+            transition-property: transform;
+            cursor: pointer; 
+            &:hover{
+                -webkit-transform: translateY(-10px);
+                transform: translateY(-10px);
+            }       
+        img{
+           cursor: pointer;
+        }
+    }
+}
+
+
+.campaign-info{
+    .how-it-works{
+        font-size: 14px;
+        font-family: $go-bold;
+        text-transform: uppercase;
+        font-weight: 700;
+    }
+    .steps{
+        font-size: 25px;
+        line-height: 1;
+        padding-bottom: 15px;
+        > span{
+            margin-right: 30px;
+            span{
+                font-size: 40px;
+                font-weight: bold; 
+            }
+        }
+    }
+    .update{
+        font-size: 25px;
+        font-weight: bold;
+        font-family: $go-bold;
+        padding-bottom: 25px;
+    }
+
+}
+
+.countdown-wrap{
+    .countdown-text{
+        background: #232e48;
+        border-radius: 3px  3px 0 0;
+        display: inline-block;
+        padding: 7px 10px 5px;
+        font-size: 14px;
+        font-weight: bold;
+        font-family: $go-bold;
+         color: #fe9f2b;
+    }
+    .countdown{
+        background: #232e48;
+        border-radius: 3px  3px 0 0;
+        max-width: 328px;
+        margin: 0 auto;
+        overflow: hidden;
+        padding: 20px 0 10px;
+        .countdown-time{
+            display: block;
+            float: left;
+            width: 25%;             
+            font-size: 14px;
+            color: #a6a8ab;
+            font-family: $go-semibold;
+            font-weight: 500;
+            padding: 0 15px;
+            border-right: 1px solid rgba(255,255,255,0.3);
+            &:last-child{
+                border-right: 0px;
+            }
+            span{
+                display: block;
+                font-size: 30px;
+                color: #fff;
+                line-height: 1;
+                font-weight: bold;
+            font-family: $go-bold;
+            }
+        }
+    }
+}
+
+.overlay{
+    opacity: 0.8;
+    background-color: #232e48;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 1;
+    display: none;
+}
+
+.osaka-campaign-popup{
+    width: 620px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-left: -310px;
+    margin-top: -215px;
+    background: #fff;
+    z-index: 2;
+    text-align: center;
+    padding: 50px 40px 35px;   
+    display: none;
+     -webkit-transform: scale(0.3);
+    -webkit-animation-duration: 500ms;
+    transform: scale(0.3);
+    animation-duration: 500ms;
+    &.show{
+        -webkit-animation-name: mbsc-anim-sh-in;            
+        animation-name: mbsc-anim-sh-in;
+        display: block;
+        transform: scale(1); 
+    }
+    .popup-intro{
+        padding: 0 0 15px;
+         font-size: 18px;
+         line-height: 1.67;
+         color: #232e48;
+         font-weight: 500;
+    }
+    h3{
+        font-size: 14px;
+        font-weight: 500;
+        color: #c5ad6c;
+        line-height: 1.79;
+        margin:0 0 10px;
+    }
+    h4{
+         font-size: 14px;
+        font-weight: bold;
+        margin: 0 0 7px;
+        font-family: $go-bold;
+    }
+}
+
+.highlight{   
+    margin: 0 auto 20px;
+    background: #f3f3f3;
+    overflow: hidden;
+    img{
+        width: 150px;
+        height: 100px;
+        float: left;
+        margin-right: 20px;
+    }
+    .highlight-wrap{
+        display: flex;
+        align-content: center;
+        justify-content: flex-start;
+        padding: 30px 0 25px;
+        font-weight: 500;
+        span{
+            width: 44px;
+            height: 44px;
+            border: solid 2px #eb4279;
+            border-radius: 50%;
+            display: block;
+            line-height: 2.5;
+            margin-right: 10px;
+        }
+        p{
+            max-width: 285px;
+            margin: 0;
+             font-size: 14px;
+             color: #232e48;
+             line-height: 1.57;
+             text-align: left;
+        }
+    }
+}
+
+.popup-header{
+    background: #ffb816;
+    height: 20px;
+    left: -10px;
+    right: -10px;
+    top: 0;
+    position: absolute;
+    box-shadow: 0 4px 17px rgba(0,0,0,0.2);
+    span{
+         background-color: #fc7870;
+         width: 140px;
+         height: 20px;
+         display: block;
+         margin: 0 auto;
+    }
+    &:before{
+        content:"";
+        position: absolute;
+        top: -65px;
+        width: 167px;
+        left: 50%;
+        margin-left: -83px;
+        height: 73px;
+        z-index: -1;
+        background: url("../images/ribbon.svg");
+    }
+}
+
+#mainForm{
+    text-align: left;
+    .input-wrapper{
+        display: flex;
+        justify-content: space-between;
+        align-items:flex-end;
+        margin-bottom: 25px;
+    }
+    label{
+        display: block;
+        font-family: $go-bold;
+        font-size: 14px;
+         color: #232e48;
+         font-weight: 700;
+         line-height: 2;
+         padding-bottom: 5px;
+    }
+    .input-control{
+        // float: left;
+    }
+    input[type="text"]{
+        width: 180px;
+        height: 40px;
+        border: solid 2px #eeeeee;
+        border-radius: 3px;
+        padding: 7px 15px;
+        color: #cbcbcb;
+        font-size: 12px;
+        &.error{
+            border: solid 2px #f5445a;
+        }
+    }
+    .form-btn{
+        width: 140px;
+        height: 40px;
+        -ms-touch-action: manipulation;
+        touch-action: manipulation;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        border: 1px solid transparent;
+        background-color: #c5ad6c;
+        border-radius: 3px;
+        font-size: 14px;
+        font-family: $go-bold;
+        font-weight: 700;
+        color: #fff;
+        cursor: pointer;
+        &:disabled{
+            opacity: 0.5;
+        }
+    }
+
+    .container {
+        display: inline-block;
+        position: relative;
+        padding-left: 35px;
+        cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        font-size: 12px;
+        font-weight: 500;
+        color: #232e48;
+        a{
+            font-weight: 700;
+            font-family: $go-bold;
+            color: #000;
+        }
+    }
+
+    /* Hide the browser's default checkbox */
+    .container input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+    }
+
+    /* Create a custom checkbox */
+    .checkmark {
+        position: absolute;
+        top: 2px;
+        left: 0;
+        height: 20px;
+        width: 20px;
+        background-color: #ffffff;
+        border-radius: 5px;
+        border: 2px solid #eee;
+    }
+
+    /* On mouse-over, add a grey background color */
+    .container:hover input ~ .checkmark {
+        background-color: #eee;
+    }
+
+    /* When the checkbox is checked, add a blue background */
+    .container input:checked ~ .checkmark {
+        background-color: #eee;
+    }
+
+    .container input.error ~ .checkmark {
+        border-color: #f5445a;
+    }
+
+    /* Create the checkmark/indicator (hidden when not checked) */
+    .checkmark:after {
+        content: "";
+        position: absolute;
+        display: none;
+    }
+
+    /* Show the checkmark when checked */
+    .container input:checked ~ .checkmark:after {
+        display: block;
+    }
+
+    /* Style the checkmark/indicator */
+    .container .checkmark:after {
+        left: 5px;
+        top: 1px;
+        width: 4px;
+        height: 9px;
+        border: solid black;
+        border-width: 0 2px 2px 0;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+}
+
+
+@keyframes mbsc-anim-sh-in {
+  from {opacity:0;transform: scale(0.3); }
+  to {opacity: 1;transform: scale(1); } }
+
+@-webkit-keyframes mbsc-anim-sh-in {
+  from {opacity:0;transform: scale(0.3); }
+  to {opacity: 1;transform: scale(1); } }

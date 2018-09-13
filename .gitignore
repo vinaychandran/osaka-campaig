@@ -1,0 +1,9 @@
+.DS_Store
+node_modules
+dist
+.tmp
+bower_components
+test/bower_components
+.vs
+app/css/main.css
+/app/css/calendar.css

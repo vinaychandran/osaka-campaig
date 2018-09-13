@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Booking Widget</title>
+    <meta charset=utf-8>
+    <meta name=viewport content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta http-equiv=X-UA-Compatible content="IE=11">    
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="dest/css/main.css" /> 
+</head>
+<body>
+    <div class="overlay"></div>
+    <div class="osaka-campaign-wrap">
+        <div class="logo"><img src="dest/images/logo.svg" alt=""></div>
+        <div class="camapign-home-top">
+            <div class="campaign-header">                
+                <h1>アートホテル大阪ベイタワーでしか食べられない</h1>
+            </div> 
+            <div class="campaign-name">
+                <img src="dest/images/campaign-name.svg" alt="">
+            </div>   
+            <h2>豪華無料宿泊券、当たる！</h2>
+        </div>
+        <div class="camapign-home-bottom">
+            <div class="gift-box-wrap">
+                <div class="gift-box">
+                    <img src="dest/images/box.svg" alt="">
+                </div>
+                <div class="gift-box">
+                    <img src="dest/images/box.svg" alt="">
+                </div>
+                <div class="gift-box testing">
+                    <img src="dest/images/box.svg" alt="">
+                </div>
+            </div>
+            <div class="campaign-info">
+                <div class="how-it-works">That’s how it works:</div>
+                <div class="steps">
+                    <span><span>1.</span> Select a box</span>
+                    <span><span>2.</span> Unveil your mystery Dish</span>
+                    <span><span>3.</span> Enter your email</span>
+                </div>
+                <div class="update">応募者全員に素敵な商品プレゼント</div>
+            </div>
+            <div class="countdown-wrap">
+                <div class="countdown-text">キャンペーン期間：</div>
+                <div class="countdown">
+                    <div class="countdown-time">
+                        <span class="days"></span>
+                        日々
+                    </div>
+                    <div class="countdown-time">
+                        <span class="hours"></span>
+                        時間
+                    </div>
+                    <div class="countdown-time">
+                        <span class="minutes"></span>
+                        分
+                    </div>
+                    <div class="countdown-time">
+                        <span class="seconds"></span>
+                        秒
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="osaka-campaign-popup">
+        <div class="popup-header">
+            <span></span>            
+        </div>
+        <div class="popup-intro">交浪スナムキ便景鳥ヤ思月ゆ一鮮地 MYSTAYSメケソ児極そ合暮ニヲユヒ段文チ内法カオヒシ内境事す入負シス飯雄ねド</div>
+        <h3>児極そ合暮ニヲユヒ段文チ内法カオヒシ内境事入負シス飯雄ねド</h3>
+        <h4>シス飯雄ねド</h4>
+        <div class="highlight">
+            <img src="dest/images/prize.jpg" alt="">
+            <div class="highlight-wrap">
+                <span>A便</span>
+                <p>交浪スナムキ便景鳥ヤ思月ゆ暮ニヲユヒ段文チ内法カオヒシ内境事す</p>
+            </div>
+        </div>
+        <form name="mainForm" id="mainForm" action="" >
+            <div class="input-wrapper clearfix">
+                <div class="input-control">
+                    <label class="text-input" for="name">氏名</label>
+                    <input type="text" id="name" name="name" placeholder="氏名を入力" autocomplete="off" />
+                </div>
+                <div class="input-control">
+                    <label class="text-input" for="email">メールアドレス</label>
+                    <input type="text" id="email" name="email" placeholder="メールアドレスを入力" autocomplete="off" />
+                </div>
+                <button type="submit" class="form-btn">応募する</button>
+            </div>
+            <div class="checkbox-control">  
+                <label class="container">  * <a href="#" id="popup-button">応募規約</a>・プライバシーポリシーに同意の上、応募します。              
+                    <input type="checkbox" id="privacyPolicy" name="checkbox[]" placeholder="privacyPolicy" />
+                    <span class="checkmark"></span>
+                </label>
+            </div>
+            
+        </form>
+        
+        
+        
+    </div>
+    <script src="js/jquery-1.9.1.js"></script> 
+    <script src="js/jquery.validate.min.js"></script> 
+    <script type="text/javascript" src="js/init.js"></script> 
+
+</body>	
+</html>
