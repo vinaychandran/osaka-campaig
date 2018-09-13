@@ -193,7 +193,17 @@ h2 {
     display: block;
     width: 140px;
     height: 140px;
-    margin: 0 auto 20px; }
+    margin: 0 auto 20px;
+    position: relative; }
+    .popup-result .img:after {
+      content: "";
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 46px;
+      height: 46px;
+      background: url(../images/confirmation-icon.png) 9px 10px no-repeat #fff;
+      border-radius: 50%; }
   .popup-result p {
     font-size: 16px;
     font-weight: 500;
@@ -225,7 +235,7 @@ h2 {
     display: flex;
     align-content: center;
     justify-content: flex-start;
-    padding: 30px 0 25px;
+    padding: 28px 0 25px;
     font-weight: 500; }
     .highlight .highlight-wrap span {
       width: 44px;

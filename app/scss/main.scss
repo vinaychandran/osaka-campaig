@@ -291,7 +291,7 @@ h2{
 }
 
 .popup-first{
-    //display: none;
+   // display: block;
     .popup-intro{
         padding: 0 0 15px;
          font-size: 18px;
@@ -326,6 +326,17 @@ h2{
         width: 140px;
         height: 140px;
         margin: 0 auto 20px;
+        position: relative;
+        &:after{
+            content:"";
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 46px;
+            height: 46px;
+            background: url(../images/confirmation-icon.png) 9px 10px no-repeat #fff;
+            border-radius: 50%;
+        }
     }
     p{
          font-size: 16px;
@@ -362,7 +373,7 @@ h2{
         display: flex;
         align-content: center;
         justify-content: flex-start;
-        padding: 30px 0 25px;
+        padding: 28px 0 25px;
         font-weight: 500;
         span{
             width: 44px;
