@@ -93,10 +93,9 @@ $go-bold: "Yu Gothic Bold", "游ゴシック Bold", "YuGothic", "ゴシック体
 
 body{
 	font-family: $go-semibold;
-    background: #ffa229;
     margin: 0;
     padding: 0;
-    background: url("../images/floor.jpg") ;
+    background: #fafafa;
 }
 
 *{
@@ -563,3 +562,333 @@ h2{
 @-webkit-keyframes mbsc-anim-sh-in {
   from {opacity:0;transform: scale(0.3); }
   to {opacity: 1;transform: scale(1); } }
+
+
+
+/* Slider */
+
+.slick-slider {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -ms-touch-action: pan-y;
+    touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+}
+.slick-list {
+    position: relative;
+    overflow: hidden;
+    display: block;
+    margin: 0;
+    padding: 0;
+
+    &:focus {
+        outline: none;
+    }
+
+    &.dragging {
+        cursor: pointer;
+        cursor: hand;
+    }
+}
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+.slick-track {
+    position: relative;
+    left: 0;
+    top: 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+
+    &:after {
+        clear: both;
+    }
+
+    .slick-loading & {
+        visibility: hidden;
+    }
+}
+.slick-slide {
+    float: left;
+    height: 100%;
+    min-height: 1px;
+    [dir="rtl"] & {
+        float: right;
+    }
+    img {
+        display: block;
+    }
+    &.slick-loading img {
+        display: none;
+    }
+
+    display: none;
+
+    &.dragging img {
+        pointer-events: none;
+    }
+
+    .slick-initialized & {
+        display: block;
+    }
+
+    .slick-loading & {
+        visibility: hidden;
+    }
+
+    .slick-vertical & {
+        display: block;
+        height: auto;
+        border: 1px solid transparent;
+    }
+}
+.slick-arrow.slick-hidden {
+    display: none;
+}
+
+
+.thankyou-top{
+    background: url("../images/thankyou-bg.jpg");
+    background-size:100% 100%; 
+    position: relative;
+    text-align: center;
+    color: #fff;
+    .logo{
+        position: absolute;
+    }
+    h1{
+        font-size: 45px;
+        font-weight: bold;
+        font-family: $go-bold;
+        padding: 35px 0 6px;
+    }
+    h4{
+        font-size: 25px;
+        font-weight: 500;
+        margin: 0 0 45px;
+    }
+}
+
+.campaign-slider{
+    overflow: hidden;
+    width: 100%;    
+    .slick-list{
+        //padding: 0 250px;
+        max-width: 940px;
+        margin: 0 auto;
+        overflow: initial;
+    }
+    .slick-slide{
+        width: 940px;
+        margin: 0 25px;
+       box-sizing: border-box;
+       position: relative;
+    }
+    .slick-arrow{
+        position: absolute;
+        width: 66px;
+        height: 66px;
+        z-index: 1;
+        background: #fff;
+        font-size: 0;
+        line-height: 0;
+        position: absolute;
+        top: 50%;
+        display: block;
+        padding: 0;
+        -webkit-transform: translate(0, -50%);
+        -ms-transform: translate(0, -50%);
+        transform: translate(0, -50%);
+        cursor: pointer;
+        color: transparent;
+        border: none;
+        outline: none;
+        border:1px solid #000;
+        &.slick-next{
+            right: 50%;
+            margin-right: -570px;
+            &:before{
+                content: "→";
+                font-size: 20px;
+                z-index: 1;
+                color: #232e48;                
+            }            
+        }
+        &.slick-prev{
+            left: 50%;
+            margin-left: -570px;
+            &:before{
+                content: "←";
+                font-size: 20px;
+                z-index: 1;
+                color: #232e48;                
+            }            
+        }
+    }
+    .slick-content{
+        width: 460px;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        background: rgba(35,46,72,0.4);
+        padding: 23px 50px 13px 25px;
+        text-align: left;
+        .count{
+            position: absolute;
+            right: 25px;
+            top: 25px;
+        }
+        h4{
+            margin: 0;
+             font-size: 25px;
+             font-family: $go-bold;
+        }
+        p{
+            font-size: 18px;
+            line-height: 1.67;
+            margin: 0;
+        }
+    }
+}
+
+
+.hotel-booking-wrap{
+    padding: 40px 0;
+    .book-at{
+        font-size: 25px;
+        font-weight: 500;
+    }
+    h2{
+        font-family: $go-bold;
+         font-size: 45px;
+         padding: 10px 0 20px;
+         margin: 0;
+    }
+    .discount{
+        font-size: 25px;
+        font-weight: 500;
+        padding-bottom: 25px;
+    }
+
+    .book-now{
+        display: inline-block;
+        width: 183px;
+        background-color: #c5ad6c;
+        box-shadow: 0 8px 5px 0 rgba(216, 111, 39, 0.14);
+        padding: 16px 0;
+        font-size: 20px;
+        font-weight: 700;
+        font-family: $go-bold;
+        text-decoration: none;
+        color: #ffffff;
+    }
+}
+
+.resturants-wrap{
+    max-width: 940px;
+    margin: 0 auto;
+}
+
+.resturant-container{
+    display: flex;  
+    -webkit-flex-flow: row wrap;
+    justify-content: space-between;
+    .resturant{
+        width: 300px;
+        margin-bottom: 20px;
+        background-color: #ffffff;
+        box-shadow: 14px 1px 90px 0 rgba(0, 0, 0, 0.1);
+    }
+    .img{
+        position: relative;
+        span{
+             font-size: 20px;
+             font-family: $go-bold;
+             color: #fff;
+             position: absolute;
+             left: 30px;
+             bottom: 20px;
+             font-weight: 700;
+        }
+    }
+    .resturant-content{
+        padding: 15px 30px;
+        p{
+            font-size: 13px;
+            line-height: 1.5;
+            margin: 0 0 15px;
+        }
+        .contact-heading{
+            font-size: 14px;
+            font-weight: bold;
+            font-family: $go-bold;
+            padding: 15px 0 5px;
+            border-top: 1px solid #f1f3ee;
+        }
+        .phone-number{
+            font-size: 20px;
+            font-weight: bold;
+            font-family: $go-bold;
+            text-decoration: none;
+            color: #222d47;
+        }
+        .see-more {
+            text-align: center;
+            position: relative;
+            margin-top: 10px;
+            display: block;
+            cursor: pointer;
+            text-decoration: none;
+            &:before {
+                content: "";
+                position: absolute;
+                left: 0;
+                right: 0;
+                height: 1px;
+                background-color:#000000;
+                top: 12px;
+            }
+
+            &:after {
+                content: "";
+                position: absolute;
+                left: 0;
+                right: 0;
+                height: 1px;
+                background-color:#000000;
+                top: 14px;
+            }
+
+            span {
+                background: #fff;
+                font-weight: 700;
+                color: #c5ad6c;
+                padding: 0 35px;
+                position: relative;
+                z-index: 1;
+                font-family: $go-bold;
+                font-size: 13px;
+            }
+        }
+    }
+}
