@@ -106,7 +106,7 @@ $go-bold: "Yu Gothic Bold", "游ゴシック Bold", "YuGothic", "ゴシック体
     @extend %clearfix;
     margin-left: -15px;
     margin-right: -15px;
-    @include md {
+    @include sm {
         margin-left: -20px;
         margin-right: -20px;
     }
@@ -182,7 +182,7 @@ body{
         width: 100%;
         height: auto;
     }
-    @include sm {
+    @include md {
         top: 30px;
         left: 30px;
         width: 120px;
@@ -203,9 +203,12 @@ body{
         padding: 95px 30px 15px;
         @include sm {
             font-size: 25px;
-            padding: 78px 0 35px;
+            padding: 95px 0 35px;
             font-family: $go-bold;
             font-weight: 700;
+        }
+        @include md {
+            padding: 78px 0 35px;
         }
     }
 
@@ -227,14 +230,61 @@ body{
 .campaign-name{
     max-width: 325px;
     margin: 0 auto;
-    @include sm {
-        max-width: auto;
+    @include md {
+        max-width: 460px;
     }
     img{
         display: block;
         margin: 0 auto;
         width: 100%;
         height: auto;
+    }
+}
+
+.campaign-name-wrap{
+    position: relative;
+    max-width: 870px;
+    margin: 0 auto;
+    .background-food-items{
+        img{
+            position: absolute;
+        }
+    }
+    .food1{
+        left: 0;
+        top: 0;
+        width: 91px;
+        height: auto;
+        @include md {
+            top: 50px;
+            width: 152px;
+        }
+    }
+    .food2{
+        right: 0;
+        top: 0;
+        width: 83px;
+        height: auto;
+        @include md {
+            top: 50px;
+            width: 138px;
+        }
+    }
+    .food3{
+        bottom: -50px;
+        left: -200px;
+        display: none;
+        @include md {
+            display: block;
+        }
+    }
+    .food4{
+        bottom: -50px;
+        right: -200px;
+        display: none;
+        @include md {
+            display: block;
+        }
     }
 }
 
@@ -301,6 +351,12 @@ body{
     @include device {
         padding-top: 70px;
     }
+    @include sm {
+        padding-top: 90px;
+    }
+    @include md {
+        padding-top: 0;
+    }
     .how-it-works{
         font-size: 12px;
         font-family: $go-bold;
@@ -317,18 +373,21 @@ body{
         @include device {
             display: flex; 
             padding: 15px 20px;   
-
         }
         @include sm {
             font-size: 25px;
+            display: block;
         }
         > span{
             margin-right: 30px;
-            @include device {
-                display: flex;
+            display: flex;
+            @include device {                
                 margin: 0 5px;
                 text-align: left;
                 max-width: 130px;
+            }
+            @include sm {
+                display: inline;
             }
             span{
                 font-size: 25px;
@@ -348,6 +407,7 @@ body{
         padding-bottom: 25px;
         span{
             cursor: pointer;
+            padding-left: 10px; 
         }
         @include sm {
             font-size: 25px;
@@ -415,7 +475,7 @@ body{
     display: none;
 }
 
-.osaka-campaign-popup{
+.osaka-campaign-popup, .osaka-price-popup{
     width: 325px;
     position: fixed;
     top: 50%;
@@ -430,7 +490,7 @@ body{
     -webkit-animation-duration: 500ms;
     transform: scale(0.3) translateY(-50%);
     animation-duration: 500ms;
-    @include sm {
+    @include md {
         width: 620px;
         margin-left: -310px;
         padding: 50px 40px 35px; 
@@ -440,19 +500,22 @@ body{
         animation-name: mbsc-anim-sh-in;
         display: block;
         transform: scale(1) translateY(-50%); 
-    }
-    
+    }    
 }
 
 .popup-first{
    // display: block;
+   padding-top: 30px;
+   @include md {
+    padding-top: 0;
+   }
     .popup-intro{
         padding: 0 0 15px;
          font-size: 12px;
          line-height: 1.5;
          color: #232e48;
          font-weight: 500;
-         @include sm {
+         @include md {
             font-size: 18px;
             line-height: 1.67;
             padding: 0 0 10px;
@@ -464,7 +527,7 @@ body{
         color: #c5ad6c;
         line-height: 1.5;
         margin:0 0 10px;
-        @include sm {
+        @include md {
             line-height: 1.79;
             font-size: 14px;
         }
@@ -483,7 +546,7 @@ body{
         font-family: $go-bold;
         font-size: 23px;
         margin: 0 0 10px;
-        @include sm {
+        @include md {
              font-size: 35px;
         }
     }
@@ -509,7 +572,7 @@ body{
          font-weight: 500;
          line-height: 1.5;
          margin-bottom: 20px;
-         @include sm {
+         @include md {
             font-size: 16px;
             line-height: 1.67;
          }
@@ -533,7 +596,7 @@ body{
     margin: 0 auto 10px;
     background: #f3f3f3;
     overflow: hidden;
-    @include sm {
+    @include md {
         margin: 0 auto 20px;
     }
     img{
@@ -541,7 +604,7 @@ body{
         height: 80px;
         float: left;
         margin-right: 30px;
-        @include sm {
+        @include md {
             width: 150px;
             height: 100px;
             margin-right: 20px;
@@ -554,7 +617,7 @@ body{
         padding: 5px 25px 5px 0;
         font-weight: 500;
         position: relative;
-        @include sm {
+        @include md {
             padding: 28px 0 25px;
         }
         span{
@@ -580,7 +643,7 @@ body{
             color: #232e48;
             line-height: 1.57;
             text-align: left;
-            @include sm {
+            @include md {
                 font-size: 14px;
             }
         }
@@ -595,7 +658,7 @@ body{
     top: 0;
     position: absolute;
     box-shadow: 0 4px 17px rgba(0,0,0,0.2);
-    @include sm {
+    @include md {
         left: -10px;
         right: -10px;
          height: 20px;
@@ -606,7 +669,7 @@ body{
          height: 15px;
          display: block;
          margin: 0 auto;
-         @include sm {
+         @include md {
             height: 20px;
          }
 
@@ -622,7 +685,7 @@ body{
         z-index: -1;
         background: url("../images/ribbon.svg");
         background-size: cover;
-        @include sm {
+        @include md {
             margin-left: -83px;
             top: -65px;
             width: 167px;
@@ -632,11 +695,18 @@ body{
     }
 }
 
+.osaka-price-popup .popup-header{
+    top: -1px;
+    &:before{
+        display: none;
+    }
+}
+
 #mainForm{
     text-align: left;
     .input-wrapper{   
         margin-bottom: 25px;     
-        @include sm {
+        @include md {
             display: flex;
             justify-content: space-between;
             align-items:flex-end;            
@@ -650,7 +720,7 @@ body{
         font-weight: 700;
         line-height: 2;
         padding-bottom: 5px;
-        @include sm {
+        @include md {
             font-size: 14px;
         }
     }
@@ -666,7 +736,7 @@ body{
         color: #cbcbcb;
         font-size: 12px;
         margin-bottom: 10px;
-        @include sm {
+        @include md {
             width: 180px;
             margin-bottom: 0;
         }
@@ -694,7 +764,7 @@ body{
         &:disabled{
             opacity: 0.5;
         }
-        @include sm {
+        @include md {
             margin-top: 0;
             width: 140px;
         }
@@ -907,9 +977,9 @@ body{
         padding: 94px 0 6px;
         margin: 0;
         line-height: 1;
-        @include sm {
+        @include md {
             font-size: 45px;
-            padding: 35px 0 6px;
+            padding: 45px 0 6px;
         }
     }
     h4{
@@ -917,7 +987,7 @@ body{
         font-weight: 500;
         margin: 0 0 25px;
         line-height: 1;
-        @include sm {
+        @include md {
             font-size: 25px;
             margin: 0 0 45px;
         }
@@ -932,7 +1002,7 @@ body{
         max-width: 290px;
         margin: 0 auto;
         overflow: initial;
-        @include sm {
+        @include md {
             max-width: 940px;
         }
     }
@@ -941,7 +1011,7 @@ body{
         margin: 0 7px;
         box-sizing: border-box;
         position: relative;
-        @include sm {
+        @include md {
             width: 940px;
             margin: 0 25px;
         }
@@ -1008,7 +1078,7 @@ body{
             right: 9px;
             top: 9px;
             font-size: 14px;
-            @include sm {
+            @include md {
                 right: 25px;
                 top: 25px;
                 font-size: 16px;
@@ -1018,7 +1088,7 @@ body{
             margin: 0;
             font-size: 14px;
             font-family: $go-bold;
-            @include sm {
+            @include md {
                 font-size: 25px;
             }
         }
@@ -1026,7 +1096,7 @@ body{
             font-size: 12px;
             line-height: 1.67;
             margin: 0;
-            @include sm {
+            @include md {
                 font-size: 18px;
             }
         }
@@ -1036,13 +1106,13 @@ body{
 
 .hotel-booking-wrap{
     padding: 30px 0;
-    @include sm {
+    @include md {
         padding: 40px 0;
     }
     .book-at{
         font-size: 14px;
         font-weight: 500;
-        @include sm {
+        @include md {
             font-size: 25px;
         }
     }
@@ -1050,7 +1120,7 @@ body{
         font-family: $go-bold;
          font-size: 20px;
          margin: 0;
-         @include sm {
+         @include md {
             font-size: 45px;
             padding: 10px 0 20px;
          }
@@ -1059,7 +1129,7 @@ body{
         font-size: 14px;
         font-weight: 500;
         padding-bottom: 15px;
-        @include sm {
+        @include md {
             font-size: 25px;
             padding-bottom: 25px;
         }
@@ -1076,7 +1146,7 @@ body{
         font-family: $go-bold;
         text-decoration: none;
         color: #ffffff;
-        @include sm {
+        @include md {
             width: 183px;
             font-size: 20px;
         }
@@ -1086,7 +1156,7 @@ body{
 .resturants-wrap{
     max-width: 940px;
     margin: 0 auto;
-    @include sm {
+    @include md {
         margin: 0 auto 50px;
     }
     h3{
@@ -1094,7 +1164,7 @@ body{
         padding: 20px 10px 20px;
         font-size: 20px;
         text-align: center;
-        @include sm {
+        @include md {
             font-size: 45px;
             font-family: $go-bold;
             font-weight: 700;
@@ -1109,7 +1179,7 @@ body{
 
 .resturant-container{
     
-    @include sm {
+    @include md {
         display: flex;  
         -webkit-flex-flow: row wrap;
         justify-content: space-between;
@@ -1361,4 +1431,49 @@ footer {
   font-size:10px; 
    font-family: 'Lato';
   letter-spacing: 1px;
+}
+
+.close-icon{
+    position: absolute;
+    right: 10px;
+    top: -35px;
+    cursor: pointer;
+    &:after, &:before {
+      position: absolute;
+      left: 0;
+      content: ' ';
+      height: 25px;
+      width: 2px;
+      background-color: #fff;
+      cursor: pointer;
+    }
+    &:before {
+      transform: rotate(45deg);
+    }
+    &:after {
+      transform: rotate(-45deg);
+    }
+}
+
+.terms-condition-content{
+    display: none;
+    padding: 30px 0 0;
+    height: 350px;
+    overflow: auto;
+    position: relative;
+    p{
+        text-align: left;
+    }    
+}
+
+
+.terms-back{
+    position: absolute;
+    top: 25px;
+    display: none;
+    color: #5cc6d1;
+    padding: 5px 10px;
+    font-family: $go-bold;
+    font-weight: 700;
+    cursor: pointer;
 }

@@ -62,13 +62,42 @@ $(function() {
         });
 
         $( ".overlay" ).on( "click", function() {
-            $(".osaka-campaign-popup").removeClass("show");
+            $(".osaka-campaign-popup, .osaka-price-popup").removeClass("show");
             $(this).hide();
+            $(".popup-form-content").slideDown();
+            $(".terms-back").hide();
+            $(".terms-condition-content").hide('slow');
+        });
+
+        $( ".close-icon" ).on( "click", function() {
+            $(".osaka-campaign-popup, .osaka-price-popup").removeClass("show");
+           $(".overlay").hide();
+           $(".popup-form-content").slideDown();
+            $(".terms-back").hide();
+            $(".terms-condition-content").hide('slow');
         });
 
         $(".gift-box-wrap").on( "click", function() {
             $(".osaka-campaign-popup").addClass("show");
             $(".overlay").show();
+        });
+
+        $(".update span").on( "click", function() {
+            $(".osaka-price-popup").addClass("show");
+            $(".overlay").show();
+        });
+
+         $("#popup-button").on( "click", function() {
+            $(".popup-form-content").slideUp();
+            $(".terms-back").show();
+            $(".terms-condition-content").slideDown();
+            $(".overlay").show();
+        });
+
+        $(".terms-back").on( "click", function() {
+            $(".popup-form-content").slideDown();
+            $(".terms-back").hide();
+            $(".terms-condition-content").hide('slow');
         });
     }
 });

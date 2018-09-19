@@ -10,7 +10,7 @@
 .row {
   margin-left: -15px;
   margin-right: -15px; }
-  @media (min-width: 1024px) {
+  @media (min-width: 768px) {
     .row {
       margin-left: -20px;
       margin-right: -20px; } }
@@ -68,7 +68,7 @@ body {
   .logo img {
     width: 100%;
     height: auto; }
-  @media (min-width: 768px) {
+  @media (min-width: 1024px) {
     .logo {
       top: 30px;
       left: 30px;
@@ -89,9 +89,12 @@ body {
     @media (min-width: 768px) {
       .camapign-home-top h1 {
         font-size: 25px;
-        padding: 78px 0 35px;
+        padding: 95px 0 35px;
         font-family: "Yu Gothic Bold", "游ゴシック Bold", "YuGothic", "ゴシック体", "Sawarabi Gothic", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
         font-weight: 700; } }
+    @media (min-width: 1024px) {
+      .camapign-home-top h1 {
+        padding: 78px 0 35px; } }
   .camapign-home-top h2 {
     font-size: 24px;
     font-family: "Yu Gothic Bold", "游ゴシック Bold", "YuGothic", "ゴシック体", "Sawarabi Gothic", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
@@ -105,14 +108,53 @@ body {
 .campaign-name {
   max-width: 325px;
   margin: 0 auto; }
-  @media (min-width: 768px) {
+  @media (min-width: 1024px) {
     .campaign-name {
-      max-width: auto; } }
+      max-width: 460px; } }
   .campaign-name img {
     display: block;
     margin: 0 auto;
     width: 100%;
     height: auto; }
+
+.campaign-name-wrap {
+  position: relative;
+  max-width: 870px;
+  margin: 0 auto; }
+  .campaign-name-wrap .background-food-items img {
+    position: absolute; }
+  .campaign-name-wrap .food1 {
+    left: 0;
+    top: 0;
+    width: 91px;
+    height: auto; }
+    @media (min-width: 1024px) {
+      .campaign-name-wrap .food1 {
+        top: 50px;
+        width: 152px; } }
+  .campaign-name-wrap .food2 {
+    right: 0;
+    top: 0;
+    width: 83px;
+    height: auto; }
+    @media (min-width: 1024px) {
+      .campaign-name-wrap .food2 {
+        top: 50px;
+        width: 138px; } }
+  .campaign-name-wrap .food3 {
+    bottom: -50px;
+    left: -200px;
+    display: none; }
+    @media (min-width: 1024px) {
+      .campaign-name-wrap .food3 {
+        display: block; } }
+  .campaign-name-wrap .food4 {
+    bottom: -50px;
+    right: -200px;
+    display: none; }
+    @media (min-width: 1024px) {
+      .campaign-name-wrap .food4 {
+        display: block; } }
 
 .camapign-home-bottom {
   background: url("../images/floor.jpg");
@@ -170,6 +212,14 @@ body {
   .campaign-info {
     padding-top: 70px; } }
 
+@media (min-width: 768px) {
+  .campaign-info {
+    padding-top: 90px; } }
+
+@media (min-width: 1024px) {
+  .campaign-info {
+    padding-top: 0; } }
+
 .campaign-info .how-it-works {
   font-size: 12px;
   font-family: "Yu Gothic Bold", "游ゴシック Bold", "YuGothic", "ゴシック体", "Sawarabi Gothic", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
@@ -189,15 +239,19 @@ body {
       padding: 15px 20px; } }
   @media (min-width: 768px) {
     .campaign-info .steps {
-      font-size: 25px; } }
+      font-size: 25px;
+      display: block; } }
   .campaign-info .steps > span {
-    margin-right: 30px; }
+    margin-right: 30px;
+    display: flex; }
     @media screen and (max-width: 1023px) {
       .campaign-info .steps > span {
-        display: flex;
         margin: 0 5px;
         text-align: left;
         max-width: 130px; } }
+    @media (min-width: 768px) {
+      .campaign-info .steps > span {
+        display: inline; } }
     .campaign-info .steps > span span {
       font-size: 25px;
       font-weight: bold;
@@ -213,7 +267,8 @@ body {
   font-family: "Yu Gothic Bold", "游ゴシック Bold", "YuGothic", "ゴシック体", "Sawarabi Gothic", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
   padding-bottom: 25px; }
   .campaign-info .update span {
-    cursor: pointer; }
+    cursor: pointer;
+    padding-left: 10px; }
   @media (min-width: 768px) {
     .campaign-info .update {
       font-size: 25px; } }
@@ -270,7 +325,7 @@ body {
   z-index: 1;
   display: none; }
 
-.osaka-campaign-popup {
+.osaka-campaign-popup, .osaka-price-popup {
   width: 325px;
   position: fixed;
   top: 50%;
@@ -285,45 +340,48 @@ body {
   -webkit-animation-duration: 500ms;
   transform: scale(0.3) translateY(-50%);
   animation-duration: 500ms; }
-  @media (min-width: 768px) {
-    .osaka-campaign-popup {
+  @media (min-width: 1024px) {
+    .osaka-campaign-popup, .osaka-price-popup {
       width: 620px;
       margin-left: -310px;
       padding: 50px 40px 35px; } }
-  .osaka-campaign-popup.show {
+  .osaka-campaign-popup.show, .osaka-price-popup.show {
     -webkit-animation-name: mbsc-anim-sh-in;
     animation-name: mbsc-anim-sh-in;
     display: block;
     transform: scale(1) translateY(-50%); }
 
-.popup-first .popup-intro {
-  padding: 0 0 15px;
-  font-size: 12px;
-  line-height: 1.5;
-  color: #232e48;
-  font-weight: 500; }
-  @media (min-width: 768px) {
-    .popup-first .popup-intro {
-      font-size: 18px;
-      line-height: 1.67;
-      padding: 0 0 10px; } }
-
-.popup-first h3 {
-  font-size: 13px;
-  font-weight: 500;
-  color: #c5ad6c;
-  line-height: 1.5;
-  margin: 0 0 10px; }
-  @media (min-width: 768px) {
-    .popup-first h3 {
-      line-height: 1.79;
-      font-size: 14px; } }
-
-.popup-first h4 {
-  font-size: 14px;
-  font-weight: bold;
-  margin: 0 0 7px;
-  font-family: "Yu Gothic Bold", "游ゴシック Bold", "YuGothic", "ゴシック体", "Sawarabi Gothic", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif; }
+.popup-first {
+  padding-top: 30px; }
+  @media (min-width: 1024px) {
+    .popup-first {
+      padding-top: 0; } }
+  .popup-first .popup-intro {
+    padding: 0 0 15px;
+    font-size: 12px;
+    line-height: 1.5;
+    color: #232e48;
+    font-weight: 500; }
+    @media (min-width: 1024px) {
+      .popup-first .popup-intro {
+        font-size: 18px;
+        line-height: 1.67;
+        padding: 0 0 10px; } }
+  .popup-first h3 {
+    font-size: 13px;
+    font-weight: 500;
+    color: #c5ad6c;
+    line-height: 1.5;
+    margin: 0 0 10px; }
+    @media (min-width: 1024px) {
+      .popup-first h3 {
+        line-height: 1.79;
+        font-size: 14px; } }
+  .popup-first h4 {
+    font-size: 14px;
+    font-weight: bold;
+    margin: 0 0 7px;
+    font-family: "Yu Gothic Bold", "游ゴシック Bold", "YuGothic", "ゴシック体", "Sawarabi Gothic", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif; }
 
 .popup-result {
   display: none; }
@@ -331,7 +389,7 @@ body {
     font-family: "Yu Gothic Bold", "游ゴシック Bold", "YuGothic", "ゴシック体", "Sawarabi Gothic", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
     font-size: 23px;
     margin: 0 0 10px; }
-    @media (min-width: 768px) {
+    @media (min-width: 1024px) {
       .popup-result h3 {
         font-size: 35px; } }
   .popup-result .img {
@@ -354,7 +412,7 @@ body {
     font-weight: 500;
     line-height: 1.5;
     margin-bottom: 20px; }
-    @media (min-width: 768px) {
+    @media (min-width: 1024px) {
       .popup-result p {
         font-size: 16px;
         line-height: 1.67; } }
@@ -375,7 +433,7 @@ body {
   margin: 0 auto 10px;
   background: #f3f3f3;
   overflow: hidden; }
-  @media (min-width: 768px) {
+  @media (min-width: 1024px) {
     .highlight {
       margin: 0 auto 20px; } }
   .highlight img {
@@ -383,7 +441,7 @@ body {
     height: 80px;
     float: left;
     margin-right: 30px; }
-    @media (min-width: 768px) {
+    @media (min-width: 1024px) {
       .highlight img {
         width: 150px;
         height: 100px;
@@ -395,7 +453,7 @@ body {
     padding: 5px 25px 5px 0;
     font-weight: 500;
     position: relative; }
-    @media (min-width: 768px) {
+    @media (min-width: 1024px) {
       .highlight .highlight-wrap {
         padding: 28px 0 25px; } }
     .highlight .highlight-wrap span {
@@ -420,7 +478,7 @@ body {
       color: #232e48;
       line-height: 1.57;
       text-align: left; }
-      @media (min-width: 768px) {
+      @media (min-width: 1024px) {
         .highlight .highlight-wrap p {
           font-size: 14px; } }
 
@@ -432,7 +490,7 @@ body {
   top: 0;
   position: absolute;
   box-shadow: 0 4px 17px rgba(0, 0, 0, 0.2); }
-  @media (min-width: 768px) {
+  @media (min-width: 1024px) {
     .popup-header {
       left: -10px;
       right: -10px;
@@ -443,7 +501,7 @@ body {
     height: 15px;
     display: block;
     margin: 0 auto; }
-    @media (min-width: 768px) {
+    @media (min-width: 1024px) {
       .popup-header span {
         height: 20px; } }
   .popup-header:before {
@@ -457,13 +515,18 @@ body {
     z-index: -1;
     background: url("../images/ribbon.svg");
     background-size: cover; }
-    @media (min-width: 768px) {
+    @media (min-width: 1024px) {
       .popup-header:before {
         margin-left: -83px;
         top: -65px;
         width: 167px;
         height: 73px;
         top: -65px; } }
+
+.osaka-price-popup .popup-header {
+  top: -1px; }
+  .osaka-price-popup .popup-header:before {
+    display: none; }
 
 #mainForm {
   text-align: left;
@@ -476,7 +539,7 @@ body {
   /* Style the checkmark/indicator */ }
   #mainForm .input-wrapper {
     margin-bottom: 25px; }
-    @media (min-width: 768px) {
+    @media (min-width: 1024px) {
       #mainForm .input-wrapper {
         display: flex;
         justify-content: space-between;
@@ -489,7 +552,7 @@ body {
     font-weight: 700;
     line-height: 2;
     padding-bottom: 5px; }
-    @media (min-width: 768px) {
+    @media (min-width: 1024px) {
       #mainForm label {
         font-size: 14px; } }
   #mainForm input[type="text"] {
@@ -501,7 +564,7 @@ body {
     color: #cbcbcb;
     font-size: 12px;
     margin-bottom: 10px; }
-    @media (min-width: 768px) {
+    @media (min-width: 1024px) {
       #mainForm input[type="text"] {
         width: 180px;
         margin-bottom: 0; } }
@@ -526,7 +589,7 @@ body {
     cursor: pointer; }
     #mainForm .form-btn:disabled {
       opacity: 0.5; }
-    @media (min-width: 768px) {
+    @media (min-width: 1024px) {
       #mainForm .form-btn {
         margin-top: 0;
         width: 140px; } }
@@ -688,16 +751,16 @@ body {
     padding: 94px 0 6px;
     margin: 0;
     line-height: 1; }
-    @media (min-width: 768px) {
+    @media (min-width: 1024px) {
       .thankyou-top h1 {
         font-size: 45px;
-        padding: 35px 0 6px; } }
+        padding: 45px 0 6px; } }
   .thankyou-top h4 {
     font-size: 16px;
     font-weight: 500;
     margin: 0 0 25px;
     line-height: 1; }
-    @media (min-width: 768px) {
+    @media (min-width: 1024px) {
       .thankyou-top h4 {
         font-size: 25px;
         margin: 0 0 45px; } }
@@ -709,7 +772,7 @@ body {
     max-width: 290px;
     margin: 0 auto;
     overflow: initial; }
-    @media (min-width: 768px) {
+    @media (min-width: 1024px) {
       .campaign-slider .slick-list {
         max-width: 940px; } }
   .campaign-slider .slick-slide {
@@ -717,7 +780,7 @@ body {
     margin: 0 7px;
     box-sizing: border-box;
     position: relative; }
-    @media (min-width: 768px) {
+    @media (min-width: 1024px) {
       .campaign-slider .slick-slide {
         width: 940px;
         margin: 0 25px; } }
@@ -777,7 +840,7 @@ body {
       right: 9px;
       top: 9px;
       font-size: 14px; }
-      @media (min-width: 768px) {
+      @media (min-width: 1024px) {
         .campaign-slider .slick-content .count {
           right: 25px;
           top: 25px;
@@ -786,33 +849,33 @@ body {
       margin: 0;
       font-size: 14px;
       font-family: "Yu Gothic Bold", "游ゴシック Bold", "YuGothic", "ゴシック体", "Sawarabi Gothic", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif; }
-      @media (min-width: 768px) {
+      @media (min-width: 1024px) {
         .campaign-slider .slick-content h4 {
           font-size: 25px; } }
     .campaign-slider .slick-content p {
       font-size: 12px;
       line-height: 1.67;
       margin: 0; }
-      @media (min-width: 768px) {
+      @media (min-width: 1024px) {
         .campaign-slider .slick-content p {
           font-size: 18px; } }
 
 .hotel-booking-wrap {
   padding: 30px 0; }
-  @media (min-width: 768px) {
+  @media (min-width: 1024px) {
     .hotel-booking-wrap {
       padding: 40px 0; } }
   .hotel-booking-wrap .book-at {
     font-size: 14px;
     font-weight: 500; }
-    @media (min-width: 768px) {
+    @media (min-width: 1024px) {
       .hotel-booking-wrap .book-at {
         font-size: 25px; } }
   .hotel-booking-wrap h2 {
     font-family: "Yu Gothic Bold", "游ゴシック Bold", "YuGothic", "ゴシック体", "Sawarabi Gothic", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
     font-size: 20px;
     margin: 0; }
-    @media (min-width: 768px) {
+    @media (min-width: 1024px) {
       .hotel-booking-wrap h2 {
         font-size: 45px;
         padding: 10px 0 20px; } }
@@ -820,7 +883,7 @@ body {
     font-size: 14px;
     font-weight: 500;
     padding-bottom: 15px; }
-    @media (min-width: 768px) {
+    @media (min-width: 1024px) {
       .hotel-booking-wrap .discount {
         font-size: 25px;
         padding-bottom: 25px; } }
@@ -835,7 +898,7 @@ body {
     font-family: "Yu Gothic Bold", "游ゴシック Bold", "YuGothic", "ゴシック体", "Sawarabi Gothic", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
     text-decoration: none;
     color: #ffffff; }
-    @media (min-width: 768px) {
+    @media (min-width: 1024px) {
       .hotel-booking-wrap .book-now {
         width: 183px;
         font-size: 20px; } }
@@ -843,7 +906,7 @@ body {
 .resturants-wrap {
   max-width: 940px;
   margin: 0 auto; }
-  @media (min-width: 768px) {
+  @media (min-width: 1024px) {
     .resturants-wrap {
       margin: 0 auto 50px; } }
   .resturants-wrap h3 {
@@ -851,7 +914,7 @@ body {
     padding: 20px 10px 20px;
     font-size: 20px;
     text-align: center; }
-    @media (min-width: 768px) {
+    @media (min-width: 1024px) {
       .resturants-wrap h3 {
         font-size: 45px;
         font-family: "Yu Gothic Bold", "游ゴシック Bold", "YuGothic", "ゴシック体", "Sawarabi Gothic", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
@@ -862,7 +925,7 @@ body {
         max-width: 300px;
         margin: 0 auto; } }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .resturant-container {
     display: flex;
     -webkit-flex-flow: row wrap;
@@ -1070,3 +1133,40 @@ footer {
   font-size: 10px;
   font-family: 'Lato';
   letter-spacing: 1px; }
+
+.close-icon {
+  position: absolute;
+  right: 10px;
+  top: -35px;
+  cursor: pointer; }
+  .close-icon:after, .close-icon:before {
+    position: absolute;
+    left: 0;
+    content: ' ';
+    height: 25px;
+    width: 2px;
+    background-color: #fff;
+    cursor: pointer; }
+  .close-icon:before {
+    transform: rotate(45deg); }
+  .close-icon:after {
+    transform: rotate(-45deg); }
+
+.terms-condition-content {
+  display: none;
+  padding: 30px 0 0;
+  height: 350px;
+  overflow: auto;
+  position: relative; }
+  .terms-condition-content p {
+    text-align: left; }
+
+.terms-back {
+  position: absolute;
+  top: 25px;
+  display: none;
+  color: #5cc6d1;
+  padding: 5px 10px;
+  font-family: "Yu Gothic Bold", "游ゴシック Bold", "YuGothic", "ゴシック体", "Sawarabi Gothic", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+  font-weight: 700;
+  cursor: pointer; }
