@@ -475,7 +475,7 @@ body{
     display: none;
 }
 
-.osaka-campaign-popup, .osaka-price-popup{
+.osaka-campaign-popup, .osaka-price-popup, .osaka-price-complete{
     width: 325px;
     position: fixed;
     top: 50%;
@@ -733,9 +733,21 @@ body{
         border: solid 2px #eeeeee;
         border-radius: 3px;
         padding: 7px 15px;
-        color: #cbcbcb;
+        color: #000;
         font-size: 12px;
         margin-bottom: 10px;
+        &::placeholder {
+            color: #cbcbcb;
+            opacity: 1; /* Firefox */
+        }
+
+        &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+           color: #cbcbcb;
+        }
+
+        &::-ms-input-placeholder { /* Microsoft Edge */
+           color: #cbcbcb;
+        }
         @include md {
             width: 180px;
             margin-bottom: 0;
@@ -1438,14 +1450,18 @@ footer {
     right: 10px;
     top: -35px;
     cursor: pointer;
+    width: 25px;
+    height: 25px;
     &:after, &:before {
-      position: absolute;
-      left: 0;
-      content: ' ';
-      height: 25px;
-      width: 2px;
-      background-color: #fff;
-      cursor: pointer;
+        position: absolute;
+        left: 50%;
+        content: ' ';
+        height: 25px;
+        width: 2px;
+        background-color: #fff;
+        cursor: pointer;
+        display: block;
+        margin-left: 0px;
     }
     &:before {
       transform: rotate(45deg);

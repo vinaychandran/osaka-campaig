@@ -62,7 +62,7 @@ $(function() {
         });
 
         $( ".overlay" ).on( "click", function() {
-            $(".osaka-campaign-popup, .osaka-price-popup").removeClass("show");
+            $(".osaka-campaign-popup, .osaka-price-popup, .osaka-price-complete").removeClass("show");
             $(this).hide();
             $(".popup-form-content").slideDown();
             $(".terms-back").hide();
@@ -70,7 +70,7 @@ $(function() {
         });
 
         $( ".close-icon" ).on( "click", function() {
-            $(".osaka-campaign-popup, .osaka-price-popup").removeClass("show");
+            $(".osaka-campaign-popup, .osaka-price-popup, .osaka-price-complete").removeClass("show");
            $(".overlay").hide();
            $(".popup-form-content").slideDown();
             $(".terms-back").hide();

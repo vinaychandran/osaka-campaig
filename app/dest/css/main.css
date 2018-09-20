@@ -325,7 +325,7 @@ body {
   z-index: 1;
   display: none; }
 
-.osaka-campaign-popup, .osaka-price-popup {
+.osaka-campaign-popup, .osaka-price-popup, .osaka-price-complete {
   width: 325px;
   position: fixed;
   top: 50%;
@@ -341,11 +341,11 @@ body {
   transform: scale(0.3) translateY(-50%);
   animation-duration: 500ms; }
   @media (min-width: 1024px) {
-    .osaka-campaign-popup, .osaka-price-popup {
+    .osaka-campaign-popup, .osaka-price-popup, .osaka-price-complete {
       width: 620px;
       margin-left: -310px;
       padding: 50px 40px 35px; } }
-  .osaka-campaign-popup.show, .osaka-price-popup.show {
+  .osaka-campaign-popup.show, .osaka-price-popup.show, .osaka-price-complete.show {
     -webkit-animation-name: mbsc-anim-sh-in;
     animation-name: mbsc-anim-sh-in;
     display: block;
@@ -561,9 +561,19 @@ body {
     border: solid 2px #eeeeee;
     border-radius: 3px;
     padding: 7px 15px;
-    color: #cbcbcb;
+    color: #000;
     font-size: 12px;
     margin-bottom: 10px; }
+    #mainForm input[type="text"]::placeholder {
+      color: #cbcbcb;
+      opacity: 1;
+      /* Firefox */ }
+    #mainForm input[type="text"]:-ms-input-placeholder {
+      /* Internet Explorer 10-11 */
+      color: #cbcbcb; }
+    #mainForm input[type="text"]::-ms-input-placeholder {
+      /* Microsoft Edge */
+      color: #cbcbcb; }
     @media (min-width: 1024px) {
       #mainForm input[type="text"] {
         width: 180px;
@@ -1138,15 +1148,19 @@ footer {
   position: absolute;
   right: 10px;
   top: -35px;
-  cursor: pointer; }
+  cursor: pointer;
+  width: 25px;
+  height: 25px; }
   .close-icon:after, .close-icon:before {
     position: absolute;
-    left: 0;
+    left: 50%;
     content: ' ';
     height: 25px;
     width: 2px;
     background-color: #fff;
-    cursor: pointer; }
+    cursor: pointer;
+    display: block;
+    margin-left: 0px; }
   .close-icon:before {
     transform: rotate(45deg); }
   .close-icon:after {
