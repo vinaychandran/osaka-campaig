@@ -1197,12 +1197,13 @@ body{
         justify-content: space-between;
     }
     .resturant{
-        width: 300px;
+        width: 450px;
         margin-bottom: 20px;
         background-color: #ffffff;
         box-shadow: 14px 1px 90px 0 rgba(0, 0, 0, 0.1);
         @include device {
             margin: 0 auto 20px;
+            width: 300px;
         }
     }
 
