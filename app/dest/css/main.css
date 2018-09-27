@@ -961,6 +961,9 @@ body {
     left: 30px;
     bottom: 20px;
     font-weight: 700; }
+  .resturant-container .img img {
+    width: 100%;
+    height: auto; }
 
 .resturant-container .resturant-content {
   padding: 15px 30px; }
