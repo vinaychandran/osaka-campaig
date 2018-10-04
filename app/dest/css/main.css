@@ -39,12 +39,16 @@
     .col.col-2-3 {
       width: calc(100% - 100% / 3); } }
 
+html {
+  overflow-x: hidden; }
+
 body {
   font-family: "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "Sawarabi Gothic", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
   margin: 0;
   padding: 0;
   background: #fafafa;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  position: relative; }
 
 * {
   outline: 0;
@@ -351,47 +355,46 @@ body {
     display: block;
     transform: scale(1) translateY(-50%); }
 
-.popup-first {
-  padding-top: 30px; }
+@media (min-width: 1024px) {
+  .popup-first {
+    padding-top: 0; } }
+
+.popup-first .popup-intro {
+  padding: 0 0 15px;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #232e48;
+  font-weight: 500; }
   @media (min-width: 1024px) {
-    .popup-first {
-      padding-top: 0; } }
-  .popup-first .popup-intro {
-    padding: 0 0 15px;
-    font-size: 12px;
-    line-height: 1.5;
-    color: #232e48;
-    font-weight: 500; }
-    @media (min-width: 1024px) {
-      .popup-first .popup-intro {
-        font-size: 18px;
-        line-height: 1.67;
-        padding: 0 0 10px; } }
-  .popup-first h3 {
-    font-size: 13px;
-    font-weight: 500;
-    color: #c5ad6c;
-    line-height: 1.5;
-    margin: 0 0 10px; }
-    @media (min-width: 1024px) {
-      .popup-first h3 {
-        line-height: 1.79;
-        font-size: 14px; } }
-  .popup-first h4 {
-    font-size: 14px;
-    font-weight: bold;
-    margin: 0 0 7px;
-    font-family: "Yu Gothic Bold", "游ゴシック Bold", "YuGothic", "ゴシック体", "Sawarabi Gothic", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif; }
+    .popup-first .popup-intro {
+      font-size: 18px;
+      line-height: 1.67;
+      padding: 0 0 10px; } }
+
+.popup-first h3 {
+  font-size: 12px;
+  font-weight: 700;
+  color: #c5ad6c;
+  line-height: 1.5;
+  margin: 0 0 5px;
+  font-family: "Yu Gothic Bold", "游ゴシック Bold", "YuGothic", "ゴシック体", "Sawarabi Gothic", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif; }
+  @media (min-width: 1024px) {
+    .popup-first h3 {
+      line-height: 1.79;
+      font-size: 14px; } }
+
+.popup-first h4 {
+  font-size: 14px;
+  font-weight: bold;
+  margin: 0 0 7px;
+  font-family: "Yu Gothic Bold", "游ゴシック Bold", "YuGothic", "ゴシック体", "Sawarabi Gothic", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif; }
 
 .popup-result {
   display: none; }
   .popup-result h3 {
     font-family: "Yu Gothic Bold", "游ゴシック Bold", "YuGothic", "ゴシック体", "Sawarabi Gothic", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
-    font-size: 23px;
-    margin: 0 0 10px; }
-    @media (min-width: 1024px) {
-      .popup-result h3 {
-        font-size: 35px; } }
+    font-size: 20px;
+    margin: 0 0 25px; }
   .popup-result .img {
     display: block;
     width: 140px;
@@ -408,54 +411,62 @@ body {
       background: url(../images/confirmation-icon.png) 9px 10px no-repeat #fff;
       border-radius: 50%; }
   .popup-result p {
-    font-size: 12px;
-    font-weight: 500;
+    font-size: 14px;
+    font-weight: 700;
     line-height: 1.5;
-    margin-bottom: 20px; }
-    @media (min-width: 1024px) {
-      .popup-result p {
-        font-size: 16px;
-        line-height: 1.67; } }
+    margin: 25px 0 30px;
+    font-family: "Yu Gothic Bold", "游ゴシック Bold", "YuGothic", "ゴシック体", "Sawarabi Gothic", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif; }
   .popup-result a {
     display: inline-block;
     width: 140px;
     text-decoration: none;
-    border: solid 2px #232e48;
+    background: #c5ad6c;
     border-radius: 3px;
     padding: 8px 10px;
     color: #232e48;
     font-size: 14px;
     font-family: "Yu Gothic Bold", "游ゴシック Bold", "YuGothic", "ゴシック体", "Sawarabi Gothic", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
     font-weight: 700;
-    margin-bottom: 20px; }
+    color: #fff;
+    margin-bottom: 0; }
+
+.higlight-container {
+  margin-bottom: 20px; }
+  @media screen and (max-width: 767px) {
+    .higlight-container {
+      height: 200px;
+      overflow: scroll;
+      margin-bottom: 13px; } }
 
 .highlight {
   margin: 0 auto 10px;
   background: #f3f3f3;
-  overflow: hidden; }
+  overflow: hidden;
+  text-align: left;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 84px; }
   @media (min-width: 1024px) {
     .highlight {
-      margin: 0 auto 20px; } }
+      height: 68px; } }
   .highlight img {
-    width: 120px;
-    height: 80px;
-    float: left;
+    width: 100px;
+    height: 84px;
     margin-right: 30px; }
     @media (min-width: 1024px) {
       .highlight img {
         width: 150px;
-        height: 100px;
-        margin-right: 20px; } }
+        height: 68px;
+        margin-right: 40px; } }
   .highlight .highlight-wrap {
-    display: flex;
-    align-content: center;
-    justify-content: flex-start;
-    padding: 5px 25px 5px 0;
+    text-align: left;
+    padding: 0;
     font-weight: 500;
     position: relative; }
     @media (min-width: 1024px) {
       .highlight .highlight-wrap {
-        padding: 28px 0 25px; } }
+        padding: 0; } }
     .highlight .highlight-wrap span {
       width: 44px;
       height: 44px;
@@ -464,23 +475,37 @@ body {
       display: block;
       line-height: 2.5;
       margin-right: 10px;
-      background: #fff; }
-      @media screen and (max-width: 1023px) {
+      background: #fff;
+      position: absolute;
+      left: -52px;
+      top: 50%;
+      margin-top: -22px;
+      text-align: center;
+      font-family: "Yu Gothic Bold", "游ゴシック Bold", "YuGothic", "ゴシック体", "Sawarabi Gothic", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+      font-weight: 700; }
+      @media (min-width: 768px) {
         .highlight .highlight-wrap span {
-          position: absolute;
-          left: -50px;
-          top: 50%;
-          margin-top: -22px; } }
+          left: -62px; } }
+    .highlight .highlight-wrap .price-total {
+      font-size: 11px;
+      color: #fff;
+      background-color: #232e48;
+      border-radius: 10px;
+      display: inline-block;
+      padding: 2px 10px;
+      margin-bottom: 5px; }
+      @media (min-width: 768px) {
+        .highlight .highlight-wrap .price-total {
+          font-size: 12px; } }
     .highlight .highlight-wrap p {
-      max-width: 285px;
       margin: 0;
-      font-size: 12px;
+      font-size: 11px;
       color: #232e48;
       line-height: 1.57;
       text-align: left; }
-      @media (min-width: 1024px) {
+      @media (min-width: 768px) {
         .highlight .highlight-wrap p {
-          font-size: 14px; } }
+          font-size: 12px; } }
 
 .popup-header {
   background: #ffb816;
@@ -1187,4 +1212,5 @@ footer {
   padding: 5px 10px;
   font-family: "Yu Gothic Bold", "游ゴシック Bold", "YuGothic", "ゴシック体", "Sawarabi Gothic", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
   font-weight: 700;
+  z-index: 1;
   cursor: pointer; }
