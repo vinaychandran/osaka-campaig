@@ -317,7 +317,7 @@ body{
     .gift-box{     
         width: 168px;
         height: 115px;   
-        background: url("../images/shadow.png") no-repeat;
+        background: url("../images/shadow.png") 0px  160px no-repeat;
         position: relative; 
         margin-top: -55px;
         -webkit-transition-duration: 0.3s;
@@ -343,7 +343,7 @@ body{
            width: 128px;
            height: auto;
            @include sm {
-            width: 220px;
+            width: 255px;
             height: auto;
            }
         }
@@ -426,7 +426,7 @@ body{
         padding-bottom: 50px;
     }
     .countdown-text{
-        background: #232e48;
+        background: #ffffff;
         border-radius: 3px  3px 0 0;
         display: inline-block;
         padding: 7px 10px 5px;
@@ -436,7 +436,7 @@ body{
          color: #fe9f2b;
     }
     .countdown{
-        background: #232e48;
+        background: #ffffff;
         border-radius: 3px  3px 0 0;
         max-width: 328px;
         margin: 0 auto;
@@ -451,14 +451,14 @@ body{
             font-family: $go-semibold;
             font-weight: 500;
             padding: 0 15px;
-            border-right: 1px solid rgba(255,255,255,0.3);
+            border-right: 1px solid #a6a8ab;
             &:last-child{
                 border-right: 0px;
             }
             span{
                 display: block;
                 font-size: 30px;
-                color: #fff;
+                color: #232e48;
                 line-height: 1;
                 font-weight: bold;
             font-family: $go-bold;
@@ -475,7 +475,7 @@ body{
     bottom: 0;
     right: 0;
     left: 0;
-    z-index: 1;
+    z-index: 2;
     display: none;
 }
 
@@ -1319,8 +1319,8 @@ body{
 
 
 footer {
-  background: #232e48;
-  color: #fff; 
+  background: #fff;
+  color: #232e48; 
   padding: 30px 0; 
   position: relative;
   z-index: 1;
@@ -1344,10 +1344,10 @@ footer {
     list-style: none;
     li{       
       a{
-        color: #fff;
-        font-family:$go-semibold;
+        color: #232e48;
+        font-family:$go-bold;
         font-size:12px;
-        font-weight: 500;
+        font-weight: 700;
         text-decoration: none;
       }
     }
@@ -1393,7 +1393,7 @@ footer {
       a{
         display: block;
         padding: 15px 0;
-        border-bottom: 1px solid rgba(255,2555,255,0.1); 
+        border-bottom: 1px solid #232e48; 
         position: relative; 
         font-family: $go-semibold; 
         letter-spacing: 1.2px;    
@@ -1442,7 +1442,8 @@ footer {
       margin-right: 30px;      
       a{
         font-size:10px;
-        font-family: $go-semibold; 
+        font-family: $go-bold; 
+        font-weight: 700;
         letter-spacing: 1px; 
         line-height: 2.6;
         display: block;
@@ -1474,8 +1475,8 @@ footer {
 
 .copyright{
   order: 6;
-  color: #fff;
-  opacity: 0.4;
+  color: #232e48;
+  opacity: 0.8;
   font-size:10px; 
    font-family: 'Lato';
   letter-spacing: 1px;
